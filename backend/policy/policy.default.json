@@ -1,0 +1,22 @@
+{
+  "version": "draft-2026-10",
+  "description": "STRICT DRAFT policy. Not clinically approved. A qualified healthcare professional must review and sign off before any real patient use; then fill approved_by and approved_on.",
+  "approved_by": null,
+  "approved_on": null,
+  "allowed_environments": ["development", "test", "preview", "production"],
+  "screening_freshness_days": 30,
+  "require_clinical_review_for_purchase": true,
+  "auto_eligible_outcomes": ["no_obvious_wound", "possible_superficial_wound"],
+  "clinician_overridable_outcomes": ["clinical_review_required", "no_obvious_wound", "possible_superficial_wound"],
+  "min_model_confidence": null,
+  "required_image_sides": ["left", "right"],
+  "urgent_symptom_rules": [
+    ["discharge"],
+    ["open_wound", "redness_swelling"],
+    ["open_wound", "unusually_warm"],
+    ["new_or_worsening_wound", "redness_swelling"],
+    ["new_or_worsening_wound", "unusually_warm"],
+    ["open_wound", "skin_color_change"]
+  ],
+  "caution_symptoms": ["open_wound", "redness_swelling", "unusually_warm", "skin_color_change", "new_or_worsening_wound"]
+}
